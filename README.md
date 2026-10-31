@@ -27,6 +27,8 @@ bash run_ax650.sh samples/listen/8k/OSR_us_000_0010_input_8k.wav output.wav
 
 输入支持 8 kHz / 16 kHz，输出固定 48 kHz。默认 1-step flow、`std=1e-4`；不做降噪。
 
+模型为 `FLowHigh_indep_adaptive_400k`（481,490,826 bytes，Flow 35.4M + BigVGAN 14.0M 参数）。AX650 侧拆成 Flow 38 MB + BigVGAN 20 MB 两个 U16/S8 axmodel；38 MB 是 S8 权重后的正常大小。
+
 ## 结果
 
 ### 8 kHz 输入（Open Speech / Samplelib）

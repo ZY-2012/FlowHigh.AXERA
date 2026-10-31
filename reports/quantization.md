@@ -1,5 +1,15 @@
 # FlowHigh AX650 quantization report
 
+## Checkpoint
+
+- Model: `FLowHigh_indep_adaptive_400k`
+- Checkpoint size: 481,490,826 bytes (460 MiB), includes optimizer state.
+- Weights: Flow 35.4M + BigVGAN 14.0M = 49.4M parameters (FP32 weights about 198 MB).
+- Source: official Google Drive folder from the FLowHigh README; local copy from the HF mirror `kiriyamaX/FLowHigh_indep_adaptive_400k`.
+- The 38 MB Flow axmodel is the S8-quantized 35.4M-parameter flow transformer; the 20 MB BigVGAN axmodel is separate.
+
+Official demo `p364_055` 8 kHz: our PyTorch output vs the official Euler output has mel LSD 0.411 and waveform corr 0.998; the board output vs official has corr 0.997, mel LSD 0.515. This confirms the checkpoint/pipeline, not a wrong download.
+
 ## Target
 
 - Board: AX650N, NPU3, axengine 2.12.0s, compiler 8.0.
