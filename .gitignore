@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.tmp/
+build/
+origin/checkpoints/
+origin/FLowHigh_code/
+models/*.onnx
+models/*.json
+models/*.axmodel
+models/*.axmodel.*
+outputs/
+*.wav
+!samples/**/*.wav
+release/
+*.log

@@ -1,0 +1,44 @@
+{
+  "model_type": "ONNX",
+  "target_hardware": "AX650",
+  "npu_mode": "NPU3",
+  "input": "/workspace/models/bigvgan_T100.onnx",
+  "output_dir": "/workspace/build/compile/bigvgan_T100",
+  "output_name": "model.axmodel",
+  "work_dir": "/workspace/build/compile/bigvgan_T100_work",
+  "input_shapes": "mel:1x256x100",
+  "onnx_opt": {
+    "disable_onnx_optimization": false,
+    "enable_onnxsim": false,
+    "model_check": true
+  },
+  "quant": {
+    "calibration_method": "MinMax",
+    "precision_analysis": false,
+    "highest_mix_precision": false,
+    "layer_configs": [
+      {
+        "start_tensor_names": [
+          "DEFAULT"
+        ],
+        "end_tensor_names": [
+          "DEFAULT"
+        ],
+        "data_type": "U16",
+        "weight_data_type": "S8",
+        "output_data_type": "U16"
+      }
+    ],
+    "input_configs": [
+      {
+        "tensor_name": "mel",
+        "calibration_dataset": "/workspace/build/calib/bigvgan_mel_T100.tar.gz",
+        "calibration_format": "Numpy",
+        "calibration_size": 275,
+        "calibration_mean": [],
+        "calibration_std": []
+      }
+    ]
+  },
+  "input_processors": []
+}
