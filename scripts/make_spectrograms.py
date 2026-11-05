@@ -44,8 +44,8 @@ def plot(src, dst, title, seconds=None):
 en = ["OSR_us_000_0010", "OSR_us_000_0013", "OSR_us_000_0057", "OSR_us_000_0059"]
 zh = ["OSR_cn_000_0072", "OSR_cn_000_0073", "OSR_cn_000_0074", "OSR_cn_000_0075"]
 for n in en + zh:
-    plot(f"8k/{n}_input_8k.wav", f"{n}_input_8k_spec.png", "8k input")
-    plot(f"48k_from8k/{n}_output_48k.wav", f"{n}_output_48k_spec.png", "8k -> 48k")
+    plot(f"8k/{n}_input_8k.wav", f"{n}_input_8k_spec.png", "8k input", 10)
+    plot(f"48k_from8k/{n}_output_48k.wav", f"{n}_output_48k_spec.png", "8k -> 48k", 10)
 plot("8k/samplelib_speech_1m_input_8k.wav", "samplelib_speech_1m_input_8k_spec.png", "8k input", 10)
 plot("48k_from8k/samplelib_speech_1m_output_48k.wav", "samplelib_speech_1m_output_48k_spec.png", "8k -> 48k", 10)
 for n in ["speech_2", "speech_3"]:
