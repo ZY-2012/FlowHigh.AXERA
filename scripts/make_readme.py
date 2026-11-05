@@ -116,7 +116,7 @@ def build(hf=False):
         lines += table("8k", n, "8k", f"8k/{n}_input_8k.wav", f"48k_from8k/{n}_output_48k.wav",
                        f"{n}_input_8k_spec.png", f"{n}_output_48k_spec.png", hf).splitlines()
         lines.append("")
-    lines += ["#### Samplelib（1 分钟，频谱图为前 10 s）", ""]
+    lines += ["#### Samplelib（1 分钟，频谱图为前 5.12 s）", ""]
     lines += table("8k", "samplelib_speech_1m", "8k", "8k/samplelib_speech_1m_input_8k.wav",
                    "48k_from8k/samplelib_speech_1m_output_48k.wav",
                    "samplelib_speech_1m_input_8k_spec.png", "samplelib_speech_1m_output_48k_spec.png", hf).splitlines()

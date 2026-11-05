@@ -39,7 +39,7 @@ bash run_ax650.sh samples/listen/8k/OSR_us_000_0010_input_8k.wav output.wav
 
 ### 8 kHz 输入（Open Speech / Samplelib）
 
-> 长音频 OSR / samplelib 的频谱图均截取**前 10 秒**；输入与输出使用同一时间段，方便对比。
+> 长音频 OSR / samplelib 的频谱图只展示**前 5.12 秒**（FlowHigh 的第一个完整 chunk）；输入与输出使用同一时间段，方便对比。长音频后续 chunk 可能有分块高频伪影，属于运行时限制。
 
 #### English
 
