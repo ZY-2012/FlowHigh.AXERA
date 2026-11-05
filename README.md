@@ -39,6 +39,8 @@ bash run_ax650.sh samples/listen/8k/OSR_us_000_0010_input_8k.wav output.wav
 
 ### 8 kHz 输入（Open Speech / Samplelib）
 
+> 长音频 OSR / samplelib 的频谱图均截取**前 10 秒**；输入与输出使用同一时间段，方便对比。
+
 #### English
 
 **OSR_us_000_0010**
